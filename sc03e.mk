@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/i9305
+LOCAL_PATH := device/samsung/sc03e
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -93,4 +93,4 @@ PRODUCT_COPY_FILES += \
 # Include common makefile
 $(call inherit-product, device/samsung/smdk4412-common/common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/i9305/i9305-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/sc03e/sc03e-vendor.mk)

@@ -1,5 +1,5 @@
 #
-# system.prop for i9305
+# system.prop for SC-03E
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so

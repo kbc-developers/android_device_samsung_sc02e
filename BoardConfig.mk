@@ -19,7 +19,7 @@
 
 -include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
-LOCAL_PATH := device/samsung/i9305
+LOCAL_PATH := device/samsung/sc03e
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -35,7 +35,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := cyanogenmod_i9305_defconfig
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := m3,m3xx,i9305,GT-I9305
+TARGET_OTA_ASSERT_DEVICE := m3,m3xx,sc03e,i9305,GT-I9305
 
 # inherit from the proprietary version
--include vendor/samsung/i9305/BoardConfigVendor.mk
+-include vendor/samsung/sc03e/BoardConfigVendor.mk

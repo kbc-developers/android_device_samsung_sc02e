@@ -1,4 +1,18 @@
-Samsung Galaxy S III LTE (GSM)
+Copyright 2013 - The CyanogenMod Project (Modded KBC)
 
-Supported variants:
-  - GT-I9305 (INTL)
+Device configuration for Samsung Galaxy S3 Alpha (ntt docomo model).
+
+WORK IN PROGRESS. WILL EAT YOUR CAT.
+
+Please add the repo of sc03e to .repo/local_manifests/roomservice.xml
+
+  <project name="kbc-developers/android_device_samsung_sc03e" path="device/samsung/sc03e" remote="github" revision="cm-10.1" />
+  <project name="kbc-developers/android_kernel_samsung_exynos4412dcm" path="kernel/samsung/exynos4412dcm" remote="github" revision="android-linux-3.0-xxx" />
+
+And modify smdk4412-common Android.mk and extract-files.sh
+
+device name filter line add sc03e
+   before: ifneq ($(filter i9300 i9305 n7100 n8000 n8013 t0lte i605 l900 r950,$(TARGET_DEVICE)),)
+   
+   after: ifneq ($(filter sc03e i9300 i9305 n7100 n8000 n8013 t0lte i605 l900 r950,$(TARGET_DEVICE)),)
+
