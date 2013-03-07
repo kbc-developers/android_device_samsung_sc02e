@@ -32,10 +32,10 @@ COMMON_GLOBAL_CFLAGS += -DCAMERA_WITH_CITYID_PARAM
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_i9305_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_sc03e_defconfig
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := m3,m3xx,sc03e,i9305,GT-I9305
+TARGET_OTA_ASSERT_DEVICE := m3,m3xx,sc03e,SC-03E,i9305,GT-I9305
 
 # inherit from the proprietary version
 -include vendor/samsung/sc03e/BoardConfigVendor.mk
