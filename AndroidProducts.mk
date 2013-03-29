@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_sc03e.mk
+    $(LOCAL_DIR)/full_sc02e.mk
