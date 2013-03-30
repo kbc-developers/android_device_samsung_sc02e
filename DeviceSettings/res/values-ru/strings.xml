@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Настройки Galaxy S III</string>
+    <string name="app_name">Настройки Galaxy Note 2</string>
 
     <string name="category_haptic_title">Отклик</string>
     <string name="vibrator_subcat_title">Вибрация</string>

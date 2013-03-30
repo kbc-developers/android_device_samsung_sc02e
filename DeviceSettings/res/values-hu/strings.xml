@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Galaxy S III Beállítások</string>
+    <string name="app_name">Galaxy Note 2 Beállítások</string>
 
     <string name="category_haptic_title">Érintési visszajelzés</string>
     <string name="vibrator_subcat_title">Rezgés</string>
