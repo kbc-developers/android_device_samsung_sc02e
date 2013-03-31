@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m3
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/t0lte
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
-    GalaxyS3Settings
+    GalaxyNote2Settings
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -75,7 +75,7 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungQualcommM3RIL \
+    ro.telephony.ril_class=SamsungQualcommD2RIL \
     telephony.lteOnGsmDevice=1 \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.ril.hsxpa=1 \

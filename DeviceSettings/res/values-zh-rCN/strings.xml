@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Galaxy S III 设置</string>
+    <string name="app_name">Galaxy Note 2 设置</string>
 
     <string name="category_haptic_title">振动</string>
     <string name="vibrator_subcat_title">振动器</string>
