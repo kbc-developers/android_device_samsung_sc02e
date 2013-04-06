@@ -20,11 +20,11 @@
 -include device/samsung/smdk4412-common/BoardCommonConfig.mk
 -include device/samsung/smdk4412-qcom-common/BoardCommonConfig.mk
 
-LOCAL_PATH := device/samsung/t0lte
+LOCAL_PATH := device/samsung/sc02e
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/vnd_t0lte.txt
+BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/vnd_sc02e.txt
 
 # RIL
 COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{ "ril.ks.status", AID_SYSTEM, 0 },'
@@ -33,11 +33,14 @@ COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{ "ril.ks.status", AID_SYSTEM, 
 COMMON_GLOBAL_CFLAGS += -DCAMERA_WITH_CITYID_PARAM
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_t0lte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos4412dcm
+#TARGET_KERNEL_CONFIG := cyanogenmod_sc02e_defconfig
+#TARGET_KERNEL_CONFIG := sc02e_aosp_defconfig
+TARGET_KERNEL_CONFIG := kbc_sc02e_aosp_defconfig
+
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := t0lte,t0ltexx,GT-N7105,t0ltedv,GT-N7105T,t0lteatt,SGH-I317,t0ltetmo,SGH-T889,t0ltecan,t0ltevl,SGH-I317M
+TARGET_OTA_ASSERT_DEVICE := sc02e,SC-02E,t0lte,t0ltexx,GT-N7105,t0ltedv,GT-N7105T,t0lteatt,SGH-I317,t0ltetmo,SGH-T889,t0ltecan,t0ltevl,SGH-I317M
 
 # inherit from the proprietary version
--include vendor/samsung/t0lte/BoardConfigVendor.mk
+-include vendor/samsung/sc02e/BoardConfigVendor.mk
