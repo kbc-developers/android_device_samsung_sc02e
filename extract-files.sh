@@ -34,17 +34,6 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
     cp -av $1/$FILE ../../../vendor/$VENDOR/$DEVICE/proprietary/$FILE
 done
 
-#echo "Pulling proprietary files..."
-#for FILE in `cat proprietary-files.oneseg.txt | grep -v ^# | grep -v ^$`; do
-#    DIR=`dirname $FILE`
-#    if [ ! -d ../../../vendor/$VENDOR/$DEVICE/proprietary/$DIR ]; then
-#        mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary/$DIR
-#    fi
-#    #adb pull /$FILE ../../../vendor/$VENDOR/$DEVICE/proprietary/$FILE
-#    cp -av $1/$FILE ../../../vendor/$VENDOR/$DEVICE/proprietary/$FILE
-#done
-
-
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2013 The CyanogenMod Project
 #
