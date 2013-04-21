@@ -21,5 +21,8 @@
 
 -include device/samsung/sc02e/BoardCommonConfig.mk
 
+# GPS
+BOARD_GPS_SET_PRIVACY := true
+
 # inherit from the proprietary version
 -include vendor/samsung/sc02e/BoardConfigVendor.mk
