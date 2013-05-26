@@ -806,12 +806,16 @@ static void select_output_device(struct m0_audio_device *adev)
 
 static void select_input_device(struct m0_audio_device *adev)
 {
-    switch(adev->in_device) {
+    int input_device = AUDIO_DEVICE_BIT_IN | adev->in_device;
+
+    switch(input_device) {
         case AUDIO_DEVICE_IN_BUILTIN_MIC:
             ALOGD("%s: AUDIO_DEVICE_IN_BUILTIN_MIC", __func__);
             break;
         case AUDIO_DEVICE_IN_BACK_MIC:
             ALOGD("%s: AUDIO_DEVICE_IN_BACK_MIC", __func__);
+            // Force use both mics for video recording
+            adev->in_device = (AUDIO_DEVICE_IN_BACK_MIC | AUDIO_DEVICE_IN_BUILTIN_MIC) & ~AUDIO_DEVICE_BIT_IN;
             break;
         case AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET:
             ALOGD("%s: AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET", __func__);
@@ -3096,19 +3100,15 @@ static int adev_config_parse(struct m0_audio_device *adev)
     struct config_parse_state s;
     FILE *f;
     XML_Parser p;
-    char property[PROPERTY_VALUE_MAX];
-    char file[80];
     int ret = 0;
     bool eof = false;
     int len;
+    char buf[1024];
 
-    property_get("ro.product.device", property, "tiny_hw");
-    snprintf(file, sizeof(file), "/system/etc/sound/%s", property);
-
-    ALOGV("Reading configuration from %s\n", file);
-    f = fopen(file, "r");
+    ALOGV("Reading configuration from %s\n", CONFIG_FILE);
+    f = fopen(CONFIG_FILE, "r");
     if (!f) {
-    ALOGE("Failed to open %s\n", file);
+    ALOGE("Failed to open %s\n", CONFIG_FILE);
     return -ENODEV;
     }
 
@@ -3126,7 +3126,7 @@ static int adev_config_parse(struct m0_audio_device *adev)
     XML_SetElementHandler(p, adev_config_start, adev_config_end);
 
     while (!eof) {
-    len = fread(file, 1, sizeof(file), f);
+    len = fread(buf, 1, sizeof(buf), f);
     if (ferror(f)) {
         ALOGE("I/O error reading config\n");
         ret = -EIO;
@@ -3134,7 +3134,7 @@ static int adev_config_parse(struct m0_audio_device *adev)
     }
     eof = feof(f);
 
-    if (XML_Parse(p, file, len, eof) == XML_STATUS_ERROR) {
+    if (XML_Parse(p, buf, len, eof) == XML_STATUS_ERROR) {
         ALOGE("Parse error at line %u:\n%s\n",
          (unsigned int)XML_GetCurrentLineNumber(p),
          XML_ErrorString(XML_GetErrorCode(p)));
