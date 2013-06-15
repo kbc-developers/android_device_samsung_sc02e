@@ -28,3 +28,5 @@ PRODUCT_COPY_FILES += \
 
 # Include common makefile
 $(call inherit-product, device/samsung/sc02e/common.mk)
+
+$(call inherit-product-if-exists, vendor/samsung/sc02e/sc02e-vendor.mk)
