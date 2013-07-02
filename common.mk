@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/t0lte
+LOCAL_PATH := device/samsung/sc02e
 
 # Overlay
 ifeq ($(TARGET_VOICE_TECH), cdma)
