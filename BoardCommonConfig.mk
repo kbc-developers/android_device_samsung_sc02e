@@ -42,7 +42,7 @@ TARGET_OTA_ASSERT_DEVICE := sc02e,SC-02E,t0lte,t0ltexx,GT-N7105,t0ltedv,GT-N7105
 
 # Selinux
 BOARD_SEPOLICY_DIRS := \
-    device/samsung/t0lte/selinux
+    device/samsung/sc02e/selinux
 
 BOARD_SEPOLICY_UNION := \
     file_contexts \
