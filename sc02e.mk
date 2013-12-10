@@ -25,7 +25,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
     $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh \
     $(LOCAL_PATH)/rootdir/sbin/init.prop.sh:root/sbin/init.prop.sh \
-    $(LOCAL_PATH)/rootdir/sbin/setpropex:root/sbin/setpropex 
+    $(LOCAL_PATH)/rootdir/sbin/setpropex:root/sbin/setpropex \
+    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess
 #    $(LOCAL_PATH)/rootdir/kbc/setprop:root/kbc/setprop
 
 PRODUCT_COPY_FILES += \
