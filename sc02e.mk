@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+#AOJP Recovery
+$(call inherit-product-if-exists, bootable/recovery/etc/aojp.mk)
+
+#AOJP Common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
 LOCAL_PATH := device/samsung/sc02e
 
 # Init files
@@ -23,11 +29,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/rootdir/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
-    $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh \
-    $(LOCAL_PATH)/rootdir/sbin/init.prop.sh:root/sbin/init.prop.sh \
-    $(LOCAL_PATH)/rootdir/sbin/setpropex:root/sbin/setpropex \
-    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess
-#    $(LOCAL_PATH)/rootdir/kbc/setprop:root/kbc/setprop
+    $(LOCAL_PATH)/rootdir/sbin/init.prop.sh:root/sbin/init.prop.sh
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
