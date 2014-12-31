@@ -26,6 +26,9 @@ BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/vnd_sc02e.txt
 # RIL
 COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{ "ril.ks.status", AID_SYSTEM, 0 },'
 
+# RIL(overwrite)
+BOARD_RIL_CLASS := ../../../device/samsung/sc02e/ril
+
 # Camera
 COMMON_GLOBAL_CFLAGS += -DCAMERA_WITH_CITYID_PARAM
 
