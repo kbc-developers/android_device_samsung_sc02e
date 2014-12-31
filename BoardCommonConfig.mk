@@ -33,6 +33,9 @@ COMMON_GLOBAL_CFLAGS += -DCAMERA_WITH_CITYID_PARAM
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos4412dcm
 TARGET_KERNEL_CONFIG := kbc_sc02e_aosp_defconfig
 
+# Kernel(overwrite)
+BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/sc02e/rootdir/fstab.smdk4x12
 RECOVERY_FSTAB_VERSION := 2
