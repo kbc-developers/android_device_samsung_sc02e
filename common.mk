@@ -39,8 +39,8 @@ PRODUCT_PACKAGES += \
     camera.smdk4x12
 
 # Sensors
-#PRODUCT_PACKAGES += \
-#    sensors.smdk4x12
+PRODUCT_PACKAGES += \
+    sensors.smdk4x12
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -72,7 +72,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    mobiledata.interfaces=pdp0,wlan0,gprs,ppp0
+    mobiledata.interfaces=pdp0,gprs,ppp0,rmnet0,rmnet1
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
