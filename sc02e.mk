@@ -28,13 +28,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=pdp0,gprs,ppp0,rmnet0,rmnet1 \
+    ro.telephony.ril.config=exynos4RadioState
+
 #for debug
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 
-# Default Locale
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.locale.language=ja \
-    ro.product.locale.region=JP
+# AOJP config (Locale,other)
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
 
 # Include common makefile
 $(call inherit-product, device/samsung/sc02e/common.mk)
