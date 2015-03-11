@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=pdp0,gprs,ppp0,rmnet0,rmnet1 \
     ro.telephony.ril.config=exynos4RadioState
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+
 #for debug
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 
