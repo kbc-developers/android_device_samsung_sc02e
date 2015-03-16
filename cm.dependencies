@@ -20,4 +20,9 @@
         "repository": "proprietary_vendor_samsung",
         "target_path": "vendor/samsung"
     }
+    {
+		"account": "kbc-developers",
+		"repository": "android_packages_apps_CMSPen",
+		"target_path": "packages/apps/CMSPen"
+    }
 ]

@@ -117,3 +117,6 @@
 /dev/felica_int_poll    0400    root    root
 /dev/felica_uid         0222    root    root
 # for felica end
+
+# for S-Pen
+#/dev/input/event12     0660    system    input
