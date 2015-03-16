@@ -119,4 +119,4 @@
 # for felica end
 
 # for S-Pen
-#/dev/input/event12     0660    system    input
+/dev/input/event12     0660    system    input
