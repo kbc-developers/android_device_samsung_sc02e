@@ -12,17 +12,15 @@
         "target_path": "kernel/samsung/exynos4412dcm"
     },
     {
-        "account": "aojp",
         "repository": "android_hardware_samsung",
         "target_path": "hardware/samsung"
     },
     {
         "repository": "proprietary_vendor_samsung",
         "target_path": "vendor/samsung"
-    }
+    },
     {
-		"account": "kbc-developers",
-		"repository": "android_packages_apps_CMSPen",
-		"target_path": "packages/apps/CMSPen"
+        "repository": "android_packages_apps_CMSPen",
+        "target_path": "packages/apps/CMSPen"
     }
 ]
