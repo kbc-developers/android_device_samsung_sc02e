@@ -16,6 +16,7 @@
         "target_path": "hardware/samsung"
     },
     {
+		"account": "CyanogenMod",
         "repository": "android_external_stlport",
         "target_path": "external/stlport"
     },
