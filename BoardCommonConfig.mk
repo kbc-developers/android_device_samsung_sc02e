@@ -34,7 +34,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos4412dcm
 TARGET_KERNEL_CONFIG := kbc_sc02e_aosp_defconfig
 
 # Kernel(overwrite)
-#BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := ttySAC2,115200 consoleblank=0 androidboot.hardware=smdk4x12 androidboot.selinux=permissive
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/sc02e/rootdir/fstab.smdk4x12
