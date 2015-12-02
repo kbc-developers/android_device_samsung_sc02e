@@ -45,7 +45,7 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_OTA_ASSERT_DEVICE := sc02e,SC-02E,t0lte,t0ltexx,GT-N7105,t0ltedv,GT-N7105T,t0lteatt,SGH-I317,t0ltetmo,SGH-T889,t0ltecan,t0ltevl,SGH-I317M
 
 # Selinux
-#BOARD_SEPOLICY_DIRS += device/samsung/sc02e/selinux
+BOARD_SEPOLICY_DIRS += device/samsung/sc02e/selinux
 
 # Linker
 BOARD_NO_CHECK_PIE_BINARY := true
