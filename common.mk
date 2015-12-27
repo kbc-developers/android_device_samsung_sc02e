@@ -102,8 +102,8 @@ $(call inherit-product, device/samsung/smdk4412-common/common.mk)
 $(call inherit-product, device/samsung/smdk4412-qcom-common/common.mk)
 
 #felica
-$(call inherit-product-if-exists, vendor/samsung/smdk4412-felica-common/smdk4412-felica-common-vendor.mk)
-DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk4412-common/overlay-felica
+#$(call inherit-product-if-exists, vendor/samsung/smdk4412-felica-common/smdk4412-felica-common-vendor.mk)
+#DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk4412-common/overlay-felica
 
 #$(call inherit-product-if-exists, vendor/samsung/smdk4412-oneseg-common/smdk4412-oneseg-common-vendor.mk)
 $(call inherit-product-if-exists, vendor/samsung/sc02e/sc02e-common-vendor.mk)
