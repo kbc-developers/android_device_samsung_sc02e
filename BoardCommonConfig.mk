@@ -30,8 +30,11 @@ TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos4412dcm
+ifeq ($(TARGET_RECOVERY),twrp)
+TARGET_KERNEL_CONFIG := kbc_sc02e_twrp_defconfig
+else
 TARGET_KERNEL_CONFIG := kbc_sc02e_aosp_defconfig
-
+endif
 # Kernel(overwrite)
 BOARD_KERNEL_CMDLINE := ttySAC2,115200 consoleblank=0 androidboot.hardware=smdk4x12 androidboot.selinux=permissive
 
