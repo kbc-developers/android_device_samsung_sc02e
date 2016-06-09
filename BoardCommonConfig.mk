@@ -32,6 +32,7 @@ TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos4412dcm
 ifeq ($(TARGET_RECOVERY),twrp)
 TARGET_KERNEL_CONFIG := kbc_sc02e_twrp_defconfig
+BOARD_RAMDISK_LZMA=true
 else
 TARGET_KERNEL_CONFIG := kbc_sc02e_aosp_defconfig
 endif
